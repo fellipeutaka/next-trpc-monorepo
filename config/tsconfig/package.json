@@ -1,0 +1,5 @@
+{
+  "name": "@acme/tsconfig",
+  "private": true,
+  "files": ["lib.json", "next.json"]
+}

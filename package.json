@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "turbo run dev --parallel --",
+    "build": "turbo run build --",
+    "clean": "rimraf {apps,config,packages}/**/{.next,.turbo,node_modules,dist,out} .turbo node_modules -g",
+    "lint": "biome check --apply-unsafe .",
+    "web": "pnpm --filter \"@acme/web\" --",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.4",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cz-commitlint": "^19.2.0",
+    "@types/node": "^20.12.11",
+    "commitizen": "^4.3.0",
+    "dotenv-cli": "^7.4.2",
+    "husky": "8.0.3",
+    "lint-staged": "^15.2.2",
+    "rimraf": "^5.0.5",
+    "turbo": "latest",
+    "typescript": "^5.4.5"
+  },
+  "lint-staged": {
+    "*": [
+      "biome check --apply --no-errors-on-unmatched --files-ignore-unknown=true"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
+}

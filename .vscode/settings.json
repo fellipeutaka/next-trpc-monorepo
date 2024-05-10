@@ -1,0 +1,24 @@
+{
+  "cSpell.words": [
+    "biomejs",
+    "codepen",
+    "commitlint",
+    "fontsource",
+    "hookform",
+    "ratelimit",
+    "sonner",
+    "superjson",
+    "tailwindcss",
+    "tanstack",
+    "trpc",
+    "turborepo",
+    "upstash",
+    "upvote",
+    "Upvoted",
+    "Upvotes"
+  ],
+  "editor.defaultFormatter": "biomejs.biome",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

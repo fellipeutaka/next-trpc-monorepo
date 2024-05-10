@@ -1,0 +1,101 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.6.4/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "all": true,
+        "noSvgWithoutTitle": "off"
+      },
+      "complexity": {
+        "all": true
+      },
+      "correctness": {
+        "all": true
+      },
+      "performance": {
+        "all": true
+      },
+      "security": {
+        "all": true
+      },
+      "style": {
+        "recommended": true,
+        "noDefaultExport": "error",
+        "noNonNullAssertion": "off"
+      },
+      "suspicious": {
+        "all": true
+      },
+      "nursery": {
+        "all": true,
+        "useImportRestrictions": "off",
+        "noNodejsModules": "off",
+        "noUndeclaredDependencies": "off",
+        "noConsole": "off",
+        "noBarrelFile": "off",
+        "noReExportAll": "off",
+        "noNamespaceImport": "off"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "include": [
+        "apps/web/src/app/**/page.tsx",
+        "apps/web/src/app/**/layout.tsx",
+        "apps/web/src/app/**/template.tsx",
+        "apps/web/src/app/**/loading.tsx",
+        "apps/web/src/app/**/error.tsx",
+        "apps/web/src/app/**/not-found.tsx",
+        "apps/web/src/app/**/default.tsx",
+        "apps/web/src/app/**/icon.tsx",
+        "apps/web/src/app/**/apple-icon.tsx",
+        "apps/web/src/app/**/manifest.ts",
+        "apps/web/src/app/**/opengraph-image.tsx",
+        "apps/web/src/app/**/twitter-image.tsx",
+        "apps/web/src/app/**/robots.ts",
+        "apps/web/src/app/**/sitemap.ts",
+
+        "apps/web/src/middleware.ts",
+        "*.config.js",
+        "*.config.mjs",
+        "*.config.ts"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["src/@types/**/*.d.ts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredVariables": "off"
+          }
+        }
+      }
+    }
+  ],
+  "javascript": {
+    "globals": ["React"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
+  }
+}
